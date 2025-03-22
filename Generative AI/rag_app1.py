@@ -23,7 +23,7 @@ if url:
 
     # Splitting the documents into chunks
     st.session_state.splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
-    st.session_state.documents = st.session_state.splitter.split_documents()
+    st.session_state.documents = st.session_state.splitter.split_documents(st.session_state.docs)
 
     # Creating Local Vector Store
     st.session_state.embedding = OllamaEmbeddings(model='mxbai-embed-large:335m')
@@ -32,10 +32,40 @@ if url:
     # Creating our Retriever
     st.session_state.retriever = st.session_state.vectorstore.as_retriever()
 
-    # Creating our Retriever Chain
-    st.session_state.document_chain = create_stuff_documents_chain()
+    # Creating our prompt template 
+    st.session_state.template = """Answer the question based only on the following context:
 
-    user_input = 
+    {context}
+
+    Question: {input}
+    """
+
+    st.session_state.prompt = ChatPromptTemplate.from_messages(
+        [
+            ('system', 'You are an helpful assistant I am giving you the context reply the user according to the context'),
+            ('user', st.session_state.template)
+        ]
+    )
+
+    # Creating our Retrieval Chain
+    st.session_state.llm = ChatOllama(model='llama3.2:3b')
+
+    st.session_state.document_chain = create_stuff_documents_chain(st.session_state.llm, st.session_state.prompt)
+
+    st.session_state.retrievalchain = create_retrieval_chain(st.session_state.retriever, st.session_state.document_chain)
+
+    user_input = st.chat_input('Enter what you want to chat with URL')
+
+    if user_input:
+        st.session_state.response = st.session_state.retrievalchain.invoke(
+            {'input' : user_input}
+        )
+
+        with st.chat_message('user'):
+            st.write(user_input)
+
+        with st.chat_message('assistant'):
+            st.write(st.session_state.response['answer'])
 
 
 else:
