@@ -6,12 +6,13 @@
 
 body {
     font-family: cursive;
+    background: #1E3E62;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    background-color: #255F38;
+    background-color: #0B192C;
     height: 60px;
     align-items: center;
     padding: 20px;
@@ -24,25 +25,24 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #1F7D53;
+    color: white;
     font-size: 20px;
     font-weight: bold;
     transition: 1s color;
 }
 
 nav ul li a:hover {
-    color: white;
+    color: #FF6500;
 }
 
 .logo {
     font-size: 25px;
     font-weight: bold;
-    color: white;
+    color: #FF6500;
 }
 
 .section {
     height: 100vh;
-    background: #27391C;
 }
 
 #home-section {
@@ -53,5 +53,16 @@ nav ul li a:hover {
 
 .home-heading {
     color: white;
-    font-size: 30px;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+p {
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#about-me { 
+    height: 100vh;
 }
