@@ -14,6 +14,7 @@ app = Flask(__name__)
 # Setting some configurations
 os.environ['EMAIL_ADDRESS'] = os.getenv('EMAIL_ADDRESS')
 
+# Email sending function 
 def send_email(to_email):
 
     # Sender Email & Password (Use App Password for Gmail)
