@@ -31,7 +31,7 @@ def send_email(to_email):
     msg['Subject'] = "Thank You For Submitting The Form"
 
     # Email Body
-    body = "Hey, Thankyou for submitting your form we will make sure to process your request, Thank You From Talha."
+    body = "Hey, Thank you for submitting your form we will make sure to process your request, Thank You From Talha."
     msg.attach(MIMEText(body, 'plain'))
 
     # Connect to Gmail's SMTP Server and Send Email
@@ -42,6 +42,7 @@ def send_email(to_email):
         server.sendmail(EMAIL_ADDRESS, TO_EMAIL, msg.as_string())  # Send email
         server.quit()  # Close the connection
         print("✅ Email sent successfully!")
+
     except Exception as e:
         print(f"❌ Error: {e}")
 
