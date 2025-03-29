@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="about">
+        <div class="about-content">
+            <h1>About Us</h1>
+            <p>We are a team of professionals dedicated to providing the best services in the industry.</p>
+            <p>Our goal is to help businesses grow by offering innovative and effective solutions.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
