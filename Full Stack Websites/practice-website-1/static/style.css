@@ -1,0 +1,319 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* General Styles */
+body {
+    background-color: #3C3D37;
+    color: #333;
+    line-height: 1.6;
+}
+
+section {
+    height: 100vh;
+}
+
+#home-nav {
+    background: #222;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navbar */
+nav {
+    background: #222;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: 1s;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    border-bottom: 2px solid #f39c12;
+}
+
+.logo {
+    color: #ECDFCC;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?technology,office') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 20px;
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background: #f39c12;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.hero .btn:hover {
+    background: #d68910;
+    transform: scale(1.1);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 50px;
+    background: #ECDFCC;
+    height: 60vh;
+}
+
+.feature {
+    width: 30%;
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.feature:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+/* About Section */
+.about {
+    /* text-align: center;
+    padding: 60px; */
+    background: #ECDFCC;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    width: 60%;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Services Section */
+.services {
+    padding: 50px;
+    background: #ECDFCC;
+    text-align: center;
+    height: 100%;
+}
+
+.services h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.service-box {
+    display: inline-block;
+    width: 40%;
+    background: white;
+    height: 170px;
+    margin: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+    padding-top: 50px;
+    cursor: pointer;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+.contact {
+    background: #ECDFCC;
+    text-align: center;
+    padding: 50px;
+}
+
+.contact h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+
+footer {
+    height: 50px;
+    background: #181C14;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background: #f39c12;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+    width: 150px;
+    transition: 1s;
+}
+
+button:hover {
+    background: #bc7605;
+    transform: scale(1.1);
+}
+
+/* Success Page */
+.success {
+    text-align: center;
+    padding: 50px;
+    background: white;
+}
+
+.success h1 {
+    font-size: 36px;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+.success p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.success .btn {
+    background: #3498db;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.success .btn:hover {
+    background: #2c81ba;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+    
+    nav ul li {
+        display: block;
+        padding: 10px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        width: 80%;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .about p, .services .service-box {
+        width: 80%;
+    }
+
+    form {
+        width: 80%;
+    }
+}
