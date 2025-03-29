@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="services">
+        <h1>Our Services</h1>
+        <div class="service-box">
+            <h2>Web Development</h2>
+            <p>We build professional websites that help businesses grow.</p>
+        </div>
+        <div class="service-box">
+            <h2>Blockchain Development</h2>
+            <p>We develop decentralized applications using blockchain technology.</p>
+        </div>
+        <div class="service-box">
+            <h2>AI Services</h2>
+            <p>We provide advanced AI solutions for your business needs.</p>
+        </div>
+        <div class="service-box">
+            <h2>Machine Learning</h2>
+            <p>We train and deploy machine learning models for your business.</p>
+        </div>
+        <div class="service-box">
+            <h2>Data Science</h2>
+            <p>We analyze and visualize data to gain insights for your business.</p>
+        </div>
+        <div class="service-box">
+            <h2>Digital Marketing</h2>
+            <p>We help businesses reach their target audience through digital channels.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
