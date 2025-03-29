@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav id="home-nav">
+        <div class="logo">Website</div>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Welcome to Our Website</h1>
+        <p>We provide top-notch solutions for your needs.</p>
+        <a href="{{ url_for('services') }}" class="btn">Explore Services</a>
+    </header>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Quality Services</h2>
+            <p>We offer the best services in the industry.</p>
+        </div>
+        <div class="feature">
+            <h2>24/7 Support</h2>
+            <p>Our team is available round the clock to help you.</p>
+        </div>
+        <div class="feature">
+            <h2>Affordable Prices</h2>
+            <p>We provide top quality at the best prices.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
