@@ -176,3 +176,34 @@
 # Q10: How do you handle class imbalance in classification problems?
 # ANS: I have an idea but not in detailed let me explain it to you like we have imbalanced classes like 500 in one class and 100 in other so our goal is to balance it by using upsampling, downsampling and SMOTE techniques.
 
+# Deep Learning Questions.
+
+# Q1: What is the vanishing gradient problem? How do ReLU and batch normalization help?
+# ANS: So when our Neural Network forward propagates on our data and then when we calculates our loss and then backward propagates we calculate gradients and update each weights in our architecture so when we use sigmoid lets say as an activation function then if the architecture is big so the gradients become so small for the early layers by chain ruling so the early start layers wieghts stops training thats called vainishing gradients and in exploding gradients the gradients becomes so large and with ReLU the outputs of a neuron squished into (0, x) which will help to reduce these problems.
+
+# Q2: What are the differences between CNNs and RNNs? When would you use each?
+# ANS: So simple CNNs means Convolutional Neural Networks it is used in learning patterns from images it has bunch of filters in it which are used to learn and extract images patterns edges and more so basically it is used to learn pattern from images. RNNs other hand used for learning patterns from textual data in older technique we only convert text into vector representation and then train that data to our normal ML algorithms but there is a problem we are not learning sequence in our data so thats why we use RNNs it helps us to learn not only patterns from data but the sequnence of the text.
+
+# Q3: How does dropout work and why is it useful?
+# ANS: We use dropout in our Neural Network Architecutre bascially it will turn off some % of neurons in a layer, % will be set and also the layers, basically it will help us to learn patterns without forming complex model.
+
+# Q4: Explain how backpropagation works. What gets updated during training?
+# ANS: So lets suppose we have a fully build Neural Network Architecture and we have a data with some features and rows now we initiate the training of our data we take first row of our data passes from all the neurons weighted average all the weights with the inputs and do this same withh all neurons and further with every layers then when the final output layers comes and also when the prediction will come from the model we calculate the loss of the prediction and actual output then our goal is to optimze the model performance by adjusting weights so we backpropagate it by chain ruling we go to each weights and use optimiziers like Adam to optimize the weigths there is techiques like we can optimze the weights by epochs or by each iteration over each rows.
+
+# Q5: What is the role of the learning rate in training a neural network?
+# ANS: Learning rates play a important role in optimzing the weights the lower the learning rate the lower the training time will the higher the learning rate the faster the training will be I think so it will manipulate the gradients.
+
+# Q6: What are weight initialization techniques and why are they important?
+# ANS: I don't know but I remember that when training starts the weight will initialize randomly so I think so it is connected to the question.
+
+# Q7: What is transfer learning and how do you use pretrained models effectively?
+# ANS: In transfer learning we use pretrained model with our model means lets say we have a pretrained model trained on images so what we does is remove the nn layers from it and include ours so now what happens is when we train the model weights of filter is not training only for NN with this the training will be fast and model will be good or we can unfreeze some convolutional layers.
+
+# Q8: Explain attention mechanism in deep learning.
+# ANS: I can explain you the whole Transformer Architecture but Lol it will take whole day, btw In attention mechanism we are giving attention to not all the words only that words which have connection.
+
+# Q9: What’s the difference between Batch Norm and Layer Norm?
+# ANS: I don't know.
+
+# Q10: Explain the architecture of a typical ResNet model and its skip connections.
+# ANS: I don't know.
