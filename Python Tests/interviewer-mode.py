@@ -207,3 +207,72 @@
 
 # Q10: Explain the architecture of a typical ResNet model and its skip connections.
 # ANS: I don't know.
+
+# NLP Related Questions
+
+# Q1: What is tokenization? How does it differ in traditional NLP and transformer models?
+# ANS: Tokenization is basically splitting a whole text into words or sentences we will take splitting whole corpus into words it helps us to convert those words to embeddings and then train the model for better pattern learning and also for transformer it helps to give attention to specific words right.
+
+# Q2:  Explain how TF-IDF works. Why is it better than just frequency count?
+# ANS: I have learn the implementation of it but I forgot it but I know that it helps to convert each text row into vector representation and I also know the frequency count one it is call BOW means the BOW will take the whole vocabulary words we can also set limit and then take each text row in our data and then if each word is present in our vocabulary which we have created we increment it with 1 otherwise 0 that will be our vector representation of each row in our data.
+
+# Q3: What is POS tagging and why is it useful?
+# ANS: I Think so it converts the word to its pos or it will tag the word to its respective pos, explain me if i am wrong.
+
+# Q4: Difference between stemming and lemmatization? Which is more accurate and why?
+# ANS: Good question, what stemming actually does is split the word into two parts and select one part means it removes the end es, ing, s, you got it. And Lemmatization does is it converts the word to its root word form means if there is a word running it will convert it to run if dancing so it will become dance, so stemming actually cuts the actual word and lemmatization actualy turns the word to its root form so lemmatization is a good option i think so.
+
+# Q5: How do word embeddings like Word2Vec or GloVe work?
+# ANS: Let me explain, In Old NLP techniques we convert the text into BOW, TF-IDF what it does is we are not actually getting words meaning so word embedding does is it gives us the words meaning so now come into its working, I think so we take the whole vocabulary from the corpus and then make a fake dataset in specific window size like 5 so it will take 4 words for X and 1 word for Y means dependent, independent features then we train a neural network with this and also I think so that neural network is not normal it I think so when the training of the specific independent feature row happens it takes embedding or OHE representation of each word and with this we got so many representation for each word and then we feed it all once to our single layer neural network and then its output goes to our output layer which consists of all vocabulary words count neurons so there we apply softmax and whatever words comes with maximum score its weights which are comming from neural network is consider as its Embedding.
+
+# Q6: What are the steps in a full NLP pipeline?
+# ANS: I think so it will be, Data Collecting, Data Preprocessing like stop word removal, lemmatization, lower case, then converts each row into its embedding using various embedding techniques, then now we have model ready to train data now we train our model with this data and also there is so many model like normal ML model, or DL model, or Sequential model if we want much better performance.
+
+# Q7: What is Named Entity Recognition (NER)? How is it used?
+# ANS: I think so it will be that we are assinging each word to its specific group like talha to name, Dubai to place.
+
+# Q8: How do you evaluate the performance of an NLP model?
+# ANS: I don't know, explain me.
+
+# Q9: What are the limitations of traditional NLP methods (vs transformers)?
+# ANS: Pretty interesting question, IN traditional NLP methods first of all before we are limited to normal models we are not able to learn patterns in our data sequentailly then sequential models comes but there is a problem occurs how can we do seq 2 seq tasks like giving sequence of words and predicting sequence of words this problem is solved by our transformer model now it will take sequence of words once and then generate sequence of words one by one.
+
+# Q10: What are attention-based models and how did they change NLP?
+# ANS: I have already explain it to you I will explain further in LLM Chapter.
+
+# LLM Based questions
+
+# Q1: What is a transformer architecture? Key components?
+# ANS: Transformer architecture is a modern NLP model which use attention mechanism to train the seq 2 seq data, now let me tell you its key components, first of all our each words of a specific row while training converts into embedding then we add a positional encoding to each word embedding then we feed our vector to encoder block then we made 2 copy of each vector 1 will go for further process and 2 one will be go to add and normalize to 1 one output so we take the 1 one vector and make its query, key, value vector we do this for all words then we do is take each word query vector and dot product it with all words key vector then we got our score for all dot products then we scale each score and apply softmax to each value then now we got our attention score then we take each value vector of key vector which we dot product before now what we does is mulitply each value of the value vector with the specific attention score we do this for all vector now we add all of the value vector to one vector now we got a final representation of our query vector this whole process called self attention or scaled dot product attention now we do this for every query vector and now we send this output vector to normalize and now here we add the previous duplicate 2 vector now when everything get done now we do the same duplicate of the vector and send the first vector to our neural network when neural network output comes we again do the normalize thing and add the previous duplicate value we do this for every vector now there is our first step completes in encoder then I think so we do this whole encoder step 6 time then now our final vector comes from each words now we go to decoder part now in decoder we have ground truth row means what actually we have to predict we first train with the sentence in decoder we do all the embedding and posistional thing and now there is happening all thing with that ground truth words now there again comes multi head attention with masked let me mention you we do the vector thing in self attention for each word multiple times multi head, in there we actually masked means zero that vector attention score which has no relation to that query vector thats it means we are not giving any importance to that word it just dissapers now we also do the same normalize add thing and create multi head now all this thing go to again multi head self attention now here our query vector is decided but the key, and value vector is comming from encoder now we do all the things and again normalize and add it and then send it to neural network and again add and normalize it then we send it to our final nerual network from which we have vocabulary size neurons then we apply softmax and which ever word or neuron comes with most probabitly we will take it as our prediction and send compare with its orignal OHE and then send its groudn truth to next prediction I think so I explain it right
+
+# Q2: How does self-attention work in LLMs?
+# ANS: I have explained it to you already the whole transformer architecture.
+
+# Q3: What is masked language modeling (MLM) and causal language modeling (CLM)?
+# ANS: I don't know
+
+# Q4: Difference between BERT and GPT architectures?
+# ANS: I think so BERT is ENCODER based and GPT is DECODER based.
+
+# Q5: What are prompt tokens, and how do LLMs interpret input prompts?
+# ANS: They are for setting LLM limitations so mulitiple users will not use it too much, explain me.
+
+# Q6: What is the role of position embeddings in transformers?
+# ANS: Already Explained.
+
+# Q7: What’s the difference between fine-tuning and prompt-engineering?
+# ANS: So in propt-engineering we are using our LLM to its full potential with prompts already trained LLM remeber this thing, and in Fine Tuning we actually train some part of the model in our data I think so.
+
+# Q8: How do you evaluate the performance of an LLM?
+# ANS: I only know about BlEU.
+
+# Q9: Explain how LangChain or similar frameworks allow LLM chaining or tool usage.
+# ANS: In Langchain everything is runnable so when we use LLM noramally it is a runnable then when we use prompt template it is also a runnable so we combine LLM, Prompt and also OutputParser in a chain so now we have to invoke our chain to invoke all runnables, and in tool it is linked to agents what we are doing is giving tools to our LLM in which it will do our task by using that tools also.
+
+# Q10: What are some limitations and risks of LLMs in real-world apps?
+# ANS: It's vulgur and harmful knowledge if not control will make mess, explain more.
+
+# Web Based Questions
+
+# Q9. How would you build a full-stack app that takes a user-uploaded image and classifies it using your ML model?
+# ANS: So simple, first of all we have to question that whate are we building, what is the input output, what the UI looks like, what tech are we using it, now comes to tech so basically we are using Machine Learning we have to collect too many data of images, preprocessed it, train our model on that data of images then we evaluate the model and improves its perfomance using all best practices, these all creates in components then we create a training pipeline from which all the components will initiate, then we create the frontend and then start building the backend we then also build a prediction pipeline from which we connect the backend and frontend via API then when the user sends an image from frontend to backend POST request then we fetches the image send it to prediction pipeline, pipeline will preprocessed the image sends to model for prediction and when the predictions comes we encode it with its categorie and then returns again to backend then show the response to frontend, then we also contarized the app and also deploy it on cloud, so simple
